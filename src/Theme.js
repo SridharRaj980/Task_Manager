@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material";
-import { blue } from "@material-ui/core/colors";
 
 const theme=createTheme({
    typography:{
@@ -84,26 +83,7 @@ palette: {
         
       },
     },
-    MuiButton: {
-      styleOverrides: {
-        root:{
-        "&.subvariantSmall": {
-          padding:'4px 6px',
-          borderRadius: 8,
-          fontWeight: 500,
-          fontSize: 12,
-          fontFamily: 'Inter',
-          backgroundColor: '#FEFCFF',
-          color: '#000000',
-          borderColor: '#000000',
-          '&:hover': {
-            backgroundColor: '#FEFCFF',
-            borderColor: '#000000',
-          },
-        },
-      },
-      },
-    },
+  
 
   
 

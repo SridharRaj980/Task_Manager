@@ -3,7 +3,7 @@ import { Grid, Typography, Button } from '@mui/material';
 import { ThemeProvider } from '@mui/material';
 import theme from '../../Theme';
 import { auth, googleProvider } from '../../firebase';
-import { signInWithPopup, onAuthStateChanged, signOut } from 'firebase/auth';
+import { signInWithPopup, onAuthStateChanged } from 'firebase/auth';
 import { FaGoogle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
@@ -22,14 +22,7 @@ const WelcomePage = () => {
     }
   };
 
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
-      setUser(null);
-    } catch (error) {
-      console.error('Error during sign-out: ', error);
-    }
-  };
+  
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
